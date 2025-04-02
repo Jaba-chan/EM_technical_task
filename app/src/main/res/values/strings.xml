@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">EM_technical_task</string>
+    <string name="onboarding_heading">Тысячи курсов \n в одном месте</string>
+    <string name="continue_str">Продолжить</string>
+    <string name="sign_in">Вход</string>
+    <string name="email">Email</string>
+    <string name="password">Пароль</string>
+    <string name="quess_no_account">Нету аккаунта?</string>
+    <string name="sign_up">Регистрация</string>
+    <string name="forgot_password">Забыл пароль</string>
+    <string name="redirect_to_vk">Redirect to VK</string>
+    <string name="redirect_to_ok">Redirect to OK</string>
+    <string name="search_cources">Search courses...</string>
+    <string name="sort_by_adding_data">По дате добавления</string>
+    <string name="main">Главная</string>
+    <string name="favorite">Избранное</string>
+    <string name="account">Аккаунт</string>
+    <string name="example_email">example@gmail.com</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="read_more">Подробнее</string>
+    <string name="price_format">%s ₽</string>
+    <string name="courses_are_emtry">К сожалению, сдесь пока ничего нет</string>
+    <string name="somthing_wrong_error">Упс, что-то пошло не так</string>
+    <string-array name="onboarding_content">
+        <item>1С Администрирование</item>
+        <item>RabbitMQ</item>
+        <item>Трафик</item>
+        <item>Контент маркетинг</item>
+        <item>B2B маркетинг</item>
+        <item>Google Аналитика</item>
+        <item>UX исследователь</item>
+        <item>Веб-аналитика</item>
+        <item>Big Data</item>
+        <item>Геймдизайн</item>
+        <item>Веб-дизайн</item>
+        <item>Cinema 4D</item>
+        <item>Промпт инженеринг</item>
+        <item>Webflow</item>
+        <item>Three.js</item>
+        <item>Парсинг</item>
+        <item>Python-разработка</item>
+    </string-array>
+</resources>
