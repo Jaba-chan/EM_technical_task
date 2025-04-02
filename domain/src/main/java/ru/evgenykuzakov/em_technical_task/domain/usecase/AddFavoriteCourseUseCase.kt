@@ -1,6 +1,5 @@
 package ru.evgenykuzakov.em_technical_task.domain.usecase
 
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import ru.evgenykuzakov.em_technical_task.domain.common.Resource

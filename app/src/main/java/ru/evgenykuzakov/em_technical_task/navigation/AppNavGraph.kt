@@ -19,11 +19,8 @@ fun AppNavGraph(
 ) {
     NavHost(
         navController = navHostController,
-        startDestination = if (viewModel.isSignedIn.value){
-            Screen.HomeScreen.route
-        } else {
-            if (viewModel.isFirstLaunch.value) Screen.OnboardingScreen.route else Screen.SignInScreen.route
-        }
+        startDestination = if (viewModel.isFirstLaunch.value) Screen.OnboardingScreen.route else Screen.SignInScreen.route
+
     ) {
         composable(Screen.SignInScreen.route) {
             signInScreenContent()

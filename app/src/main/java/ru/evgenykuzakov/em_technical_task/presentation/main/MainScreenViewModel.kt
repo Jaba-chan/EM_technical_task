@@ -1,6 +1,5 @@
 package ru.evgenykuzakov.em_technical_task.presentation.main
 
-import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
@@ -11,9 +10,6 @@ import ru.evgenykuzakov.em_technical_task.domain.common.Resource
 import ru.evgenykuzakov.em_technical_task.domain.model.Course
 import ru.evgenykuzakov.em_technical_task.domain.usecase.AddFavoriteCourseUseCase
 import ru.evgenykuzakov.em_technical_task.domain.usecase.ShowCourserUseCase
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-import java.util.Locale
 
 class MainScreenViewModel(
     private val showCourserUseCase: ShowCourserUseCase,
@@ -45,8 +41,9 @@ class MainScreenViewModel(
             addCourseToFavorite(it.copy(hasLike = true))
         }
     }
-    private fun addCourseToFavorite(course: Course){
-        addFavoriteCourseUseCase.invoke(course).onEach{}.launchIn(viewModelScope)
+
+    private fun addCourseToFavorite(course: Course) {
+        addFavoriteCourseUseCase.invoke(course).onEach {}.launchIn(viewModelScope)
     }
 
     private fun getCourses() {

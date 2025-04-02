@@ -1,6 +1,5 @@
 package ru.evgenykuzakov.em_technical_task.presentation.favorite
 
-import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
@@ -9,8 +8,6 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import ru.evgenykuzakov.em_technical_task.domain.common.Resource
 import ru.evgenykuzakov.em_technical_task.domain.model.Course
-import ru.evgenykuzakov.em_technical_task.domain.usecase.AddFavoriteCourseUseCase
-import ru.evgenykuzakov.em_technical_task.domain.usecase.ShowCourserUseCase
 import ru.evgenykuzakov.em_technical_task.domain.usecase.ShowFavoriteCoursesUseCase
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter

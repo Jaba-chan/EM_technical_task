@@ -134,7 +134,6 @@ class MainActivity : ComponentActivity() {
                                 LoginScreen(
                                     viewModel = signInViewModel,
                                     signInButtonListener = {
-                                        mainActivityViewModel.onUserSignedIn()
                                         navState.navigateToMainScreenForSignedUser()
 
                                     },

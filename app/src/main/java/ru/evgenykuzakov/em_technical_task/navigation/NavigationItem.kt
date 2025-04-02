@@ -1,10 +1,5 @@
 package ru.evgenykuzakov.em_technical_task.navigation
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.outlined.Home
-import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.graphics.vector.ImageVector
 import ru.evgenykuzakov.em_technical_task.R
 
 sealed class NavigationItem(

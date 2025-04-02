@@ -3,7 +3,6 @@ package ru.evgenykuzakov.em_technical_task.presentation.sign_in
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import ru.evgenykuzakov.em_technical_task.domain.usecase.SetSignInStateUseCase
 
 
 class SignInViewModel: ViewModel() {

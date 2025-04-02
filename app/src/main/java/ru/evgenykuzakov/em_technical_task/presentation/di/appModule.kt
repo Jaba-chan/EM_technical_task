@@ -13,16 +13,12 @@ import ru.evgenykuzakov.em_technical_task.data.remote.Api
 import ru.evgenykuzakov.em_technical_task.data.remote.repository.AppLaunchRepositoryImpl
 import ru.evgenykuzakov.em_technical_task.data.remote.repository.AppRemoteRepositoryImpl
 import ru.evgenykuzakov.em_technical_task.data.remote.repository.FavoriteCoursesRepositoryImpl
-import ru.evgenykuzakov.em_technical_task.data.remote.repository.StorageRepositoryImpl
 import ru.evgenykuzakov.em_technical_task.domain.repository.AppLaunchRepository
 import ru.evgenykuzakov.em_technical_task.domain.repository.AppRepository
 import ru.evgenykuzakov.em_technical_task.domain.repository.FavoriteCoursesRepository
-import ru.evgenykuzakov.em_technical_task.domain.repository.StorageRepository
 import ru.evgenykuzakov.em_technical_task.domain.usecase.AddFavoriteCourseUseCase
 import ru.evgenykuzakov.em_technical_task.domain.usecase.CheckFirstLaunchUseCase
-import ru.evgenykuzakov.em_technical_task.domain.usecase.CheckSignInStateUseCase
 import ru.evgenykuzakov.em_technical_task.domain.usecase.SetFirstLaunchCompleteUseCase
-import ru.evgenykuzakov.em_technical_task.domain.usecase.SetSignInStateUseCase
 import ru.evgenykuzakov.em_technical_task.domain.usecase.ShowCourserUseCase
 import ru.evgenykuzakov.em_technical_task.domain.usecase.ShowFavoriteCoursesUseCase
 import ru.evgenykuzakov.em_technical_task.presentation.MainActivityViewModel
@@ -47,19 +43,16 @@ val appModule = module {
         ).build()
     }
     single { AppLaunchRepositoryImpl(androidContext()) }.bind(AppLaunchRepository::class)
-    single { StorageRepositoryImpl(androidContext()) }.bind(StorageRepository::class)
     single { AppRemoteRepositoryImpl(get()) }.bind(AppRepository::class)
     single { FavoriteCoursesRepositoryImpl(get()) }.bind(FavoriteCoursesRepository::class)
 
     single { CheckFirstLaunchUseCase(get()) }
     single { ShowCourserUseCase(get()) }
     single { SetFirstLaunchCompleteUseCase(get()) }
-    single { CheckSignInStateUseCase(get()) }
-    single { SetSignInStateUseCase(get()) }
     single { ShowFavoriteCoursesUseCase(get()) }
     single { AddFavoriteCourseUseCase(get()) }
 
-    viewModel { MainActivityViewModel(get(), get(), get(), get()) }
+    viewModel { MainActivityViewModel(get(), get()) }
     viewModel { SignInViewModel() }
     viewModel { MainScreenViewModel(get(), get()) }
     viewModel { FavoriteScreenViewModel(get())}

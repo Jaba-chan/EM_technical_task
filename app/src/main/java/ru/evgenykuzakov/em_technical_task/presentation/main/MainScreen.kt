@@ -115,7 +115,7 @@ fun MainScreen(
             Spacer(modifier = Modifier.width(8.dp))
 
             IconButton(
-                onClick = { filterAdded.value = !filterAdded.value },
+                onClick = { },
                 modifier = Modifier
                     .size(56.dp)
                     .clip(RoundedCornerShape(56.dp))
@@ -135,7 +135,7 @@ fun MainScreen(
             modifier = Modifier
                 .align(Alignment.End)
                 .padding(vertical = 16.dp, horizontal = 16.dp)
-                .clickable { }
+                .clickable { filterAdded.value = !filterAdded.value }
         ) {
             Text(
                 text = stringResource(R.string.sort_by_adding_data),
@@ -160,7 +160,7 @@ fun MainScreen(
             is MainScreenViewModel.CoursesState.Success -> {
                 ShowCourses(
                     (state.value as MainScreenViewModel.CoursesState.Success).data
-                        .let { if (filterAdded.value) it.sortedBy { LocalDate.parse(it.startDate) } else it}
+                        .let { if (filterAdded.value) it.sortedBy { LocalDate.parse(it.startDate) } else it }
                         .map { it.copy(startDate = formatDate(it.startDate)) },
                     onFavoriteClick = { viewModel.onFavoriteButtonPressed(it) })
             }
@@ -187,7 +187,9 @@ fun CourseCard(
         102 -> painterResource(R.drawable.python_advanced)
         103 -> painterResource(R.drawable.java_developer)
         104 -> painterResource(R.drawable.generalist_3d)
-        else -> {painterResource(R.drawable.python_advanced)}
+        else -> {
+            painterResource(R.drawable.python_advanced)
+        }
     }
 
     Card(
