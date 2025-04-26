@@ -1,8 +1,0 @@
-.gradle
-.settings
-.idea
-.kotlin
-data/build
-domain/build
-app/build
-local.properties

@@ -16,9 +16,8 @@
         android:theme="@style/Theme.EM_technical_task"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.EM_technical_task">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
