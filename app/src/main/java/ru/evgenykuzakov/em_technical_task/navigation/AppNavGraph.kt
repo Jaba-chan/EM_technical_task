@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import org.koin.androidx.compose.koinViewModel
 import ru.evgenykuzakov.em_technical_task.MainActivityViewModel
 
 @Composable

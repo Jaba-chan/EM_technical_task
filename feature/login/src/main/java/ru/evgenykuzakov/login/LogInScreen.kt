@@ -36,6 +36,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
+import org.koin.androidx.compose.koinViewModel
 import ru.evgenykuzakov.resources.R
 import ru.evgenykuzakov.ui.theme.Blue
 import ru.evgenykuzakov.ui.theme.OrangeGradientEnd
@@ -43,7 +44,7 @@ import ru.evgenykuzakov.ui.theme.OrangeGradientStart
 
 @Composable
 fun LoginScreen(
-    viewModel: SignInViewModel,
+    viewModel: SignInViewModel = koinViewModel(),
     signInButtonListener: () -> Unit,
     onVKButtonClicked: () -> Unit,
     onOKButtonClicked: () -> Unit,

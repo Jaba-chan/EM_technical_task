@@ -52,13 +52,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             AppMaterialTheme {
                 KoinContext {
-                    val mainActivityViewModel = koinViewModel<MainActivityViewModel>()
-                    val signInViewModel = koinViewModel<SignInViewModel>()
-                    val mainScreenViewModel =
-                        koinViewModel<MainScreenViewModel>()
-                    val favoriteScreenViewModel =
-                        koinViewModel<FavoriteScreenViewModel>()
-
+                    val mainActivityViewModel: MainActivityViewModel = koinViewModel()
                     val navController = rememberNavController()
                     val navState = remember { NavigationState(navController) }
 
@@ -136,7 +130,6 @@ class MainActivity : ComponentActivity() {
                             navHostController = navController,
                             signInScreenContent = {
                                 LoginScreen(
-                                    viewModel = signInViewModel,
                                     signInButtonListener = {
                                         navState.navigateToMainScreenForSignedUser()
 
@@ -156,13 +149,11 @@ class MainActivity : ComponentActivity() {
                             mainScreenContent = {
                                 MainScreen(
                                     paddingValues = paddingValues,
-                                    viewModel = mainScreenViewModel
                                 )
                             },
                             favoriteScreenContent = {
                                 FavoriteScreen(
                                     paddingValues = paddingValues,
-                                    viewModel = favoriteScreenViewModel
                                 )
                             },
                             accountScreenContent = {}

@@ -48,6 +48,7 @@ import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.HazeTint
 import dev.chrisbanes.haze.hazeEffect
 import dev.chrisbanes.haze.hazeSource
+import org.koin.androidx.compose.koinViewModel
 import ru.evgenykuzakov.model.Course
 import ru.evgenykuzakov.resources.R
 import ru.evgenykuzakov.ui.theme.SmoothGlass
@@ -56,7 +57,7 @@ import ru.evgenykuzakov.ui.theme.SmoothGlass
 @Composable
 fun FavoriteScreen(
     paddingValues: PaddingValues,
-    viewModel: FavoriteScreenViewModel
+    viewModel: FavoriteScreenViewModel = koinViewModel()
 ) {
     LaunchedEffect(Unit) {
         viewModel.loadData()
